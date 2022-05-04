@@ -11,18 +11,16 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "jdmedeiros-spotsolr-tfstate"
+    bucket = "jreis-spotsolr-tfstate"
     key = "prod/services/terraform.tfstate"
     region = "us-east-1"
-    dynamodb_table = "jdmedeiros-spotsolr-tfstate-lock"
+    dynamodb_table = "jreis-spotsolr-tfstate-lock"
     encrypt = true
-    profile = "vocareum"
   }
 }
 
 provider "aws" {
   region = "us-east-1"
-  profile = "vocareum"
 }
 
 provider "cloudinit" {
