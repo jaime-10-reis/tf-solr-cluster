@@ -39,7 +39,7 @@ resource "aws_s3_bucket_object_lock_configuration" "terraform_state" {
     }
   }
 }
-*/
+*/ 
 
 resource "aws_s3_bucket_public_access_block" "terraform_state" {
   block_public_acls = true
