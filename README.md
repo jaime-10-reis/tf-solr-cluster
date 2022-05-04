@@ -1,6 +1,37 @@
 # tf-solr-cluster
 Solr cluster with 3 servers and 3 zookeepers
 
+0. Configure credentials
+
+**Contents of file ~/.aws/credentials**
+
+```
+[default]
+xaws_access_key_id=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xaws_secret_access_key=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+[vocareum]
+aws_access_key_id=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+aws_secret_access_key=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+aws_session_token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+ 
+**Contents of file ~/.aws/config**
+
+```
+[default]
+region = us-east-1
+output = json
+cli_history = enabled
+cli_auto_prompt = on
+
+
+[profile vocareum]
+region = us-east-1
+output = json
+```
+
 
 1. The first thing to do is run ```terraform init && terraform apply``` to create the S3 backend to store the Terraform state. Run this only once.
 
